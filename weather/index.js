@@ -25,11 +25,11 @@ searchInput.addEventListener("keypress", (event) => {
 // орчуулга
 function translateLocation(city, country) {
     // орчуулга логик
-    // For simplicity, let's assume you have a predefined translation object
+    // Хялбар болгохын тулд урьдчилан тодорхойлсон орчуулгын объект байна гэж бодъё
     const translations = {
         "Ulaanbaatar": "Улаанбаатар",
         "MN": "Монгол"
-        // Add more translation
+        // орчуулга нэм эсхүл хас
     };
 
     const translatedCity = translations[city] || city;
@@ -141,7 +141,7 @@ function getDescriptionTranslation(weatherId) {
         case 762:
         case 771:
         case 781:
-            return "хэсэг"; // Агаар мандлын нөхцөл
+            return "манан"; // Haze
         default:
             return "Unknown";
     }
