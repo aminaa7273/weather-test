@@ -22,6 +22,22 @@ searchInput.addEventListener("keypress", (event) => {
     }
 })
 
+// орчуулга
+function translateLocation(city, country) {
+    // орчуулга логик
+    // For simplicity, let's assume you have a predefined translation object
+    const translations = {
+        "Ulaanbaatar": "Улаанбаатар",
+        "MN": "Монгол"
+        // Add more translation
+    };
+
+    const translatedCity = translations[city] || city;
+    const translatedCountry = translations[country] || country;
+
+    return `${translatedCity}, ${translatedCountry}`;
+}
+
 function search() {
     // reset хийгдэх
     tempBox.style.display = "none";
@@ -72,7 +88,8 @@ function search() {
             // Утгыг html рүү шилжүүлэх
             document.querySelector(".current-temp .num").innerText = Math.round(temp);
             document.querySelector(".description").innerText = getDescriptionTranslation(id);
-            document.querySelector(".location-response-name").innerText = `${city}, ${country}`;
+            //document.querySelector(".location-response-name").innerText = `${city}, ${country}`; --> Орчуулаагүй хэсэг
+            document.querySelector(".location-response-name").innerText = translateLocation(city, country);
             document.querySelector(".humidity").innerText = humidity + "%";
             document.querySelector(".wind-speed").innerText = windSpeed + " Km/h";
 
