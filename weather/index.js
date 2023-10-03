@@ -100,14 +100,17 @@ function search() {
 }
 
 function getDescriptionTranslation(weatherId) {
+    // Цаг агаарын ID дээр үндэслэн цаг агаарын тодорхойлолтыг тодорхойлох switch 
     switch (weatherId) {
         case 800:
             return "цэлмэг тэнгэр"; // Clear Sky
+            // үүлэрхэг түвшин төрөл
         case 801:
         case 802:
         case 803:
         case 804:
             return "үүлэрхэг"; // Cloudy
+            //  бороо төрөл
         case 500:
         case 501:
         case 502:
