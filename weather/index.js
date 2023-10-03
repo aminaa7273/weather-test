@@ -143,7 +143,7 @@ function getDescriptionTranslation(weatherId) {
         case 781:
             return "манан"; // Haze
         default:
-            return "Unknown";
+            return "Unknown"; // default case for any other unknown weather condition
     }
 }
 
